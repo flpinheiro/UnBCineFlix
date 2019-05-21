@@ -1,6 +1,6 @@
 using System;
 
-namespace UnBCineFlixMvc.Models
+namespace UnBCineFlixMVC.Models
 {
     public class ErrorViewModel
     {

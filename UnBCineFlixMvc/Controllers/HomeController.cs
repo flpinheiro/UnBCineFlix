@@ -4,9 +4,9 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using UnBCineFlixMvc.Models;
+using UnBCineFlixMVC.Models;
 
-namespace UnBCineFlixMvc.Controllers
+namespace UnBCineFlixMVC.Controllers
 {
     public class HomeController : Controller
     {

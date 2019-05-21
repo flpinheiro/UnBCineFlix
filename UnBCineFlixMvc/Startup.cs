@@ -9,10 +9,8 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using UnBCineFlix.DAL;
-using Microsoft.EntityFrameworkCore;
 
-namespace UnBCineFlixMvc
+namespace UnBCineFlixMVC
 {
     public class Startup
     {
@@ -33,9 +31,7 @@ namespace UnBCineFlixMvc
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-            var connection = Configuration["ConexaoMySql:MySqlConnectionString"]; ;
-            services.AddDbContext<UnBCineFlixContext>(options =>
-                options.UseMySQL(connection));
+
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 
@@ -55,7 +51,7 @@ namespace UnBCineFlixMvc
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
-            
+
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
