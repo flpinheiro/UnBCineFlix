@@ -9,6 +9,8 @@ namespace UnBCineFlix.DAL
         public DbSet<Address> Addresses { get; set; }
         public DbSet<Person> People { get; set; }
         public DbSet<Phone> Phones { get; set; }
+        public DbSet<Artist> Artists { get; set; }
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
